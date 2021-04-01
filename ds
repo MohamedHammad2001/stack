@@ -33,9 +33,18 @@ top++;
     {
     return(top==-1);
     }
- bool isFull()
-    {
-    return(top==size-1);
+
+   int  FindMin(){
+
+        int min = arr[0];
+        for (int i = 0; i < size; ++i) {
+           if(arr[i] <min){
+                min = arr[i];
+
+        }
+
+        }
+        return min;
     }
     void print()
     {
@@ -57,9 +66,8 @@ st.push(1);
  st.push(2);
  st.push(3);
  st.push(4);
- st.push(5);
- st.pop();
- st.pop();
- st.pop();
+
 st.print();
+cout<<"the smallest is "<<st.FindMin()<<endl;
+
 }
