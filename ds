@@ -1,0 +1,65 @@
+#include <iostream>
+#define size 10
+using namespace std;
+class stack{
+public:
+    int top;
+    int arr[size];
+public:
+    stack(){
+    top=-1;
+    }
+    void push(int a)
+    {
+    if(top<=size-1){
+top++;
+    arr[top]=a;
+    }
+    else{
+     cout<<" stack is full \n";
+    }
+    }
+    void pop(){
+        if(top==-1 )
+    {
+        cout<<" stack is  empty" ;
+    }
+    else
+    {
+     top--;
+    }
+    }
+    bool isEmpty()
+    {
+    return(top==-1);
+    }
+ bool isFull()
+    {
+    return(top==size-1);
+    }
+    void print()
+    {
+    for( int i=0; i<=top; i++)
+    {
+    cout<<arr[i]<<endl;
+    }
+    }
+
+};
+
+
+
+
+int main()
+{
+ stack st;
+st.push(1);
+ st.push(2);
+ st.push(3);
+ st.push(4);
+ st.push(5);
+ st.pop();
+ st.pop();
+ st.pop();
+st.print();
+}
